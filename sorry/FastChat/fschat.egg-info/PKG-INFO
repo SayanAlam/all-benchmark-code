@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: fschat
+Version: 0.2.36
+Summary: An open platform for training, serving, and evaluating large language model based chatbots.
+Project-URL: Homepage, https://github.com/lm-sys/fastchat
+Project-URL: Bug Tracker, https://github.com/lm-sys/fastchat/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: fastapi
+Requires-Dist: httpx
+Requires-Dist: markdown2[all]
+Requires-Dist: nh3
+Requires-Dist: numpy
+Requires-Dist: prompt_toolkit>=3.0.0
+Requires-Dist: pydantic<3,>=2.0.0
+Requires-Dist: pydantic-settings
+Requires-Dist: psutil
+Requires-Dist: requests
+Requires-Dist: rich>=10.0.0
+Requires-Dist: shortuuid
+Requires-Dist: tiktoken
+Requires-Dist: uvicorn
+Provides-Extra: model-worker
+Requires-Dist: accelerate>=0.21; extra == "model-worker"
+Requires-Dist: peft; extra == "model-worker"
+Requires-Dist: sentencepiece; extra == "model-worker"
+Requires-Dist: torch; extra == "model-worker"
+Requires-Dist: transformers>=4.31.0; extra == "model-worker"
+Requires-Dist: protobuf; extra == "model-worker"
+Requires-Dist: openai; extra == "model-worker"
+Requires-Dist: anthropic; extra == "model-worker"
+Provides-Extra: webui
+Requires-Dist: gradio>=4.10; extra == "webui"
+Requires-Dist: plotly; extra == "webui"
+Requires-Dist: scipy; extra == "webui"
+Provides-Extra: train
+Requires-Dist: einops; extra == "train"
+Requires-Dist: flash-attn>=2.0; extra == "train"
+Requires-Dist: wandb; extra == "train"
+Provides-Extra: llm-judge
+Requires-Dist: openai<1; extra == "llm-judge"
+Requires-Dist: anthropic>=0.3; extra == "llm-judge"
+Requires-Dist: ray; extra == "llm-judge"
+Provides-Extra: dev
+Requires-Dist: black==23.3.0; extra == "dev"
+Requires-Dist: pylint==2.8.2; extra == "dev"
